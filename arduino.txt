@@ -1,4 +1,4 @@
-https://www.tinkercad.com/things/icWXqgCuNAE/editel - ссылка на задание
+https://www.tinkercad.com/things/icWXqgCuNAE/editel?sharecode=Q2feg2ilwfODeW83OqxepbaVlp519dLw6ceCl8Cjp9w - ссылка на задание
 
 датчик горит когда расстояние между обьектом и датчиком меньше 50 см
 сервопривод вращается в соотвествии с растоянием между датчика и обьектом
