@@ -1,14 +1,18 @@
-def task(name):
-    with open(name, 'r') as file:
-        n = int(file.readline().strip())
-        k = int(file.readline().strip())
-        heights = [int(file.readline().strip()) for i in range(n)]
-    maximum = 0
-    for i in range(n-k+1):
-        for j in range(n+k-1):
-            summ = heights[i] + heights[j] + ((j-1)*1000)
-            maximum = max(maximum,summ)
-    print("Максимальное значение = ", maximum)
+import numpy as np
 
-task("A.txt")
-task("B.txt")
+def main(filename):
+    with open(filename, 'r') as f:
+        N = int(f.readline().strip())
+        K = int(f.readline().strip())
+        heights = np.array([int(f.readline().strip()) for i in range(N)])
+
+    max_value = -10000001
+
+    for i in range(N - K):
+        for j in range(i + K, N):
+            distance = heights[i] + heights[j] + (j - i)
+            max_value = max(max_value, distance)
+
+    return max_value
+print("Максимальное значение для A.txt:", main("A.txt"))
+print("Максимальное значение для B.txt:", main("B.txt"))
